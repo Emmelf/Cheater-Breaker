@@ -1,13 +1,9 @@
 console.log('hello world');
 
+//Anti taille de fenêtre
 
 function handleWindowResize() {
     alert("NON NON NON, REDUIT PAS MON QUIZZ !!!");
-  }
-  
-  function handleRightClick(event) {
-    event.preventDefault();
-    alert("CLIQUE DROIT DE QUOI TOI ?");
   }
   
   document.addEventListener("DOMContentLoaded", function () {
@@ -23,3 +19,5 @@ document.oncontextmenu = document.body.oncontextmenu = function() {return false;
 
 //Anti changement de fenêtre
 
+
+//Anti copier coller
