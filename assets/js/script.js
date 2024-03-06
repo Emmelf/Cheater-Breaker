@@ -19,13 +19,16 @@ document.oncontextmenu = document.body.oncontextmenu = function() {return false;
 
 //Anti changement de fenêtre 
 
+
+/*
 const mouseTarget = document.getElementById('page');
 
 mouseTarget.addEventListener('mouseleave', e => {
-   /* on soustrait le defilement de la page pour obtenir la vraie position du curseur */
+    on soustrait le defilement de la page pour obtenir la vraie position du curseur 
    if (e.pageY - window.scrollY <= 0) {
       console.log("L'utilisateur tente de sortir de la page.");
    }
 });
+*/
 
 //Anti copier coller
