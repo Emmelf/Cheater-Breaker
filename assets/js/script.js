@@ -3,7 +3,7 @@ console.log('hello world');
 //Anti taille de fenêtre
 
 function handleWindowResize() {
-    alert("NON NON NON, REDUIT PAS MON QUIZZ !!!");
+    alert("Réduire la fenêtre de quoi toi ???");
   }
   
   document.addEventListener("DOMContentLoaded", function () {
@@ -19,5 +19,14 @@ document.oncontextmenu = document.body.oncontextmenu = function() {return false;
 
 //Anti changement de fenêtre
 
+document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState === "visible"){
+        document.title = "Active Tab";
+        window.location.href = "triche.html";
+    }
+    else{
+        document.title = "Inactive Tab"
+    }
+});
 
 //Anti copier coller
