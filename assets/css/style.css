@@ -28,3 +28,26 @@ footer{
     width: 100%;
     display: flex;
 }
+
+
+.texte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.texte textarea{
+    width: 50%;
+    height: 20rem;
+
+}
+
+textarea::placeholder{
+    font-size: 2rem;
+    color: rgb(70, 70, 70);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 20vh;
+    resize: none;
+}
