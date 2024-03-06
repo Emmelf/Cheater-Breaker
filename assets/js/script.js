@@ -15,4 +15,11 @@ function handleWindowResize() {
   });
   
   window.addEventListener('resize', handleWindowResize);
-  document.addEventListener('contextmenu', handleRightClick); 
+
+
+//Anti clique droit.
+
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+
+//Anti changement de fenêtre
+
