@@ -1,0 +1,39 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow-x: hidden;
+}
+
+
+
+.container .nocheat{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .nocheat{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: #fff;
+    text-align: center;
+}
+
+.container .nocheat{
+    font-weight: 900;
+    color: #ff0000;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    line-height: 1;
+}

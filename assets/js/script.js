@@ -19,15 +19,15 @@ document.oncontextmenu = document.body.oncontextmenu = function() {return false;
 
 //Anti changement de fenêtre 
 
-// // document.addEventListener("visibilitychange",function(){
-// //     if(document.visibilityState === "visible"){
-// //         document.title = "Active Tab";
-// //         window.location.href = "triche.html";
-// //     }
-// //     else{
-// //         document.title = "Inactive Tab"
-// //     }
-// });
+document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState === "visible"){
+        document.title = "Active Tab";
+        window.location.href = "triche.html";
+    }
+    else{
+        document.title = "Inactive Tab"
+    }
+});
 
 /*
 const mouseTarget = document.getElementById('page');

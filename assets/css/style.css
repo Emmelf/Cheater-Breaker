@@ -30,6 +30,8 @@ footer{
 }
 
 
+
+
 .texte{
     display: flex;
     justify-content: center;
@@ -40,7 +42,9 @@ footer{
 .texte textarea{
     width: 50%;
     height: 20rem;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
 }
 
 textarea::placeholder{
@@ -50,4 +54,12 @@ textarea::placeholder{
     text-align: center;
     padding-top: 20vh;
     resize: none;
+}
+
+
+header h1{
+    font-size: 1.80rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 10%;
+    padding-top: 3%;
 }
