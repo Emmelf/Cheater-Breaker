@@ -1,43 +1,57 @@
-console.log('hello world');
-
-//Anti taille de fenêtre
-
-function handleWindowResize() {
-    alert("Réduire la fenêtre de quoi toi ???");
-  }
-  
-document.addEventListener("DOMContentLoaded", function () {
-  generatePage(pageIndex);
-});
-
-window.addEventListener('resize', handleWindowResize);
 
 
-//Anti clique droit.
+// Anti clique droit
 
-document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+function NoRightClick() {
 
-//Anti changement de fenêtre 
+    document.oncontextmenu = document.body.oncontextmenu = function () { return false; }
 
-document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState === "visible"){
-        document.title = "Active Tab";
-        window.location.href = "triche.html";
+};
+
+// Détection taille fenêtre
+
+function WindowSizeDetector() {
+
+    const currdate = new Date();
+    const timing = currdate.getHours() + 'h' + currdate.getMinutes();
+
+    console.log('Sreen resolution :', window.screen.width, 'x', window.screen.height, 'at', timing);
+    console.log('HTML resolution :', document.body.clientWidth, 'x', document.body.clientHeight, 'at', timing)
+
+    function handleWindowResize() {
+
+        console.log('ALERT, HTML resolution changed :', document.body.clientWidth, 'x', document.body.clientHeight, 'at', timing);
+        window.removeEventListener('resize', handleWindowResize);
+
     }
-    else{
-        document.title = "Inactive Tab"
-    }
-});
 
-/*
-const mouseTarget = document.getElementById('page');
+    setInterval
 
-mouseTarget.addEventListener('mouseleave', e => {
-    on soustrait le defilement de la page pour obtenir la vraie position du curseur 
-   if (e.pageY - window.scrollY <= 0) {
-      console.log("L'utilisateur tente de sortir de la page.");
-   }
-});
-*/
+    window.addEventListener('resize', handleWindowResize);
 
-//Anti copier coller
+}
+
+// Détection changement de fenêtre
+
+function WindowSwitchDetector() {
+
+    window.addEventListener("blur", () => {
+        console.log('ALERT, user left the tab')
+        window.removeEventListener("blur", () => { })
+    })
+
+};
+
+// Désactiver la selection
+
+function DisableSelection() {
+
+    window.addEventListener('selectstart', function (e) { e.preventDefault(); });
+
+}
+
+
+NoRightClick();
+WindowSizeDetector();
+WindowSwitchDetector();
+DisableSelection();
