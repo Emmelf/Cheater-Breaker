@@ -1,5 +1,3 @@
-
-
 // Anti clique droit
 
 function NoRightClick() {
@@ -50,8 +48,10 @@ function DisableSelection() {
 
 }
 
+export{NoRightClick,WindowSizeDetector,WindowSwitchDetector,DisableSelection}
 
 NoRightClick();
 WindowSizeDetector();
 WindowSwitchDetector();
 DisableSelection();
+
