@@ -10,20 +10,21 @@ function NoRightClick() {
 
 function WindowSizeDetector() {
 
-    const currdate = new Date();
-    const timing = currdate.getHours() + 'h' + currdate.getMinutes();
+    let currdate = new Date();
+    let timing = currdate.getHours() + 'h' + currdate.getMinutes();
 
     console.log('Sreen resolution :', window.screen.width, 'x', window.screen.height, 'at', timing);
     console.log('HTML resolution :', document.body.clientWidth, 'x', document.body.clientHeight, 'at', timing)
 
     function handleWindowResize() {
 
+        let currdate = new Date();
+        let timing = currdate.getHours() + 'h' + currdate.getMinutes();
+
         console.log('ALERT, HTML resolution changed :', document.body.clientWidth, 'x', document.body.clientHeight, 'at', timing);
         window.removeEventListener('resize', handleWindowResize);
 
     }
-
-    setInterval
 
     window.addEventListener('resize', handleWindowResize);
 
