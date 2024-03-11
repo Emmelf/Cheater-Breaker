@@ -2,7 +2,7 @@
 
 function NoRightClick() {
 
-    document.oncontextmenu = document.body.oncontextmenu = function () { return false; }
+    document.oncontextmenu = function () { return false; }
 
 };
 
@@ -69,11 +69,15 @@ function DisableInspection() {
         }
     };
 }
-export { NoRightClick, WindowSizeDetector, WindowSwitchDetector, DisableSelection, DisableInspection }
 
-NoRightClick();
-WindowSizeDetector();
-WindowSwitchDetector();
-DisableSelection();
-DisableInspection();
+// Anti coller
 
+function DisablePaste() {
+
+window.addEventListener('paste', (event) => {
+    event.preventDefault();
+  });
+
+}
+
+export { NoRightClick, WindowSizeDetector, WindowSwitchDetector, DisableSelection, DisableInspection, DisablePaste }
