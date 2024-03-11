@@ -34,8 +34,11 @@ function WindowSizeDetector() {
 
 function WindowSwitchDetector() {
 
+    let currdate = new Date();
+    let timing = currdate.getHours() + 'h' + currdate.getMinutes();
+
     window.addEventListener("blur", () => {
-        console.log('ALERT, user left the tab')
+        console.log('ALERT, user left the tab at',timing)
         window.removeEventListener("blur", () => { })
     })
 
@@ -81,3 +84,10 @@ window.addEventListener('paste', (event) => {
 }
 
 export { NoRightClick, WindowSizeDetector, WindowSwitchDetector, DisableSelection, DisableInspection, DisablePaste }
+
+NoRightClick();
+WindowSizeDetector();
+WindowSwitchDetector();
+DisableSelection();
+DisableInspection();
+DisablePaste();
