@@ -32,3 +32,8 @@ footer{
     width: 100%;
     display: flex;
 }
+
+input{
+    width: 100%;
+    text-align: center;
+}
